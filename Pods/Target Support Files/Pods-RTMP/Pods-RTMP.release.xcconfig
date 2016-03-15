@@ -1,0 +1,8 @@
+EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/Alamofire" "$CONFIGURATION_BUILD_DIR/AlamofireOauth2" "$CONFIGURATION_BUILD_DIR/KeychainAccess" "$CONFIGURATION_BUILD_DIR/Kingfisher" "$CONFIGURATION_BUILD_DIR/MobilePlayer" "$CONFIGURATION_BUILD_DIR/ReachabilitySwift" "$CONFIGURATION_BUILD_DIR/SnapKit" "$CONFIGURATION_BUILD_DIR/SwiftyJSON"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/AlamofireOauth2/AlamofireOauth2.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/KeychainAccess/KeychainAccess.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Kingfisher/Kingfisher.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MobilePlayer/MobilePlayer.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/ReachabilitySwift/ReachabilitySwift.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SnapKit/SnapKit.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "AlamofireOauth2" -framework "KeychainAccess" -framework "Kingfisher" -framework "MobilePlayer" -framework "ReachabilitySwift" -framework "SnapKit" -framework "SwiftyJSON"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_ROOT = ${SRCROOT}/Pods

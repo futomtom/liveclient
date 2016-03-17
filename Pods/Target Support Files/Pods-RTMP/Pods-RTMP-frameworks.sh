@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/MobilePlayer/MobilePlayer.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/ReachabilitySwift/ReachabilitySwift.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/SCLAlertView/SCLAlertView.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/SnapKit/SnapKit.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework"
 fi
@@ -100,6 +101,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/MobilePlayer/MobilePlayer.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/ReachabilitySwift/ReachabilitySwift.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/SCLAlertView/SCLAlertView.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/SnapKit/SnapKit.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework"
 fi

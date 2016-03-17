@@ -27,7 +27,7 @@ class ListViewCell: UITableViewCell {
     
 
     func renderData(item: Item) {
-        
+        print("\(item.snippet.scheduledDate)")
         scheduledDate.text = item.snippet.scheduledDate
         ScheduledTime.text = item.snippet.scheduledTime
         thumbImage.kf_setImageWithURL(NSURL(string:item.snippet.ThumbnailURL!)!)

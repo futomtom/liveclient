@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import rtmpStreaming
+import rtmpstream
 import AVFoundation
 import SnapKit
 
@@ -52,6 +52,7 @@ class liveViewController: UIViewController {
             switch code {
             case RTMPConnection.Code.ConnectSuccess.rawValue:
                 rtmpStream!.publish(streamName)
+                print("publish \(streamName)")
             default:
                 break
             }

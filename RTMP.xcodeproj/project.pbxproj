@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3C7F5FEE777D479D039DD521 /* Pods_RTMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86665761BBEDBBB9EA2500A7 /* Pods_RTMP.framework */; };
+		820ED69E1C99E32F0009E033 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820ED69D1C99E32F0009E033 /* util.swift */; };
 		823DFF4A1C97D16C001077D7 /* CustomBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DFF491C97D16C001077D7 /* CustomBorderButton.swift */; };
 		823DFF4C1C97DC14001077D7 /* CreateLiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DFF4B1C97DC14001077D7 /* CreateLiveController.swift */; };
 		823DFF501C97E03E001077D7 /* RTMPServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DFF4F1C97E03E001077D7 /* RTMPServerViewController.swift */; };
-		825925BE1C9867A3001B51FF /* rtmpStreaming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825925BD1C9867A3001B51FF /* rtmpStreaming.framework */; };
+		825101651C9AC87E000EA51D /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825101641C9AC87E000EA51D /* XCGLogger.framework */; };
+		825101661C9AC88E000EA51D /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825101641C9AC87E000EA51D /* XCGLogger.framework */; };
+		825101671C9AC88E000EA51D /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 825101641C9AC87E000EA51D /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		825101691C9AC893000EA51D /* rtmpstream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 825101621C9AC871000EA51D /* rtmpstream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8251016A1C9AC8FD000EA51D /* rtmpstream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825101621C9AC871000EA51D /* rtmpstream.framework */; };
 		825925C01C9868ED001B51FF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825925BF1C9868ED001B51FF /* AVFoundation.framework */; };
-		825925C11C986C6A001B51FF /* rtmpStreaming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825925BD1C9867A3001B51FF /* rtmpStreaming.framework */; };
-		825925C21C986C6A001B51FF /* rtmpStreaming.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 825925BD1C9867A3001B51FF /* rtmpStreaming.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		825925C51C98746D001B51FF /* liveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825925C41C98746D001B51FF /* liveViewController.swift */; };
 		82E92CF31C969BAE007B871A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E92CF21C969BAE007B871A /* AppDelegate.swift */; };
 		82E92CF51C969BAE007B871A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E92CF41C969BAE007B871A /* ViewController.swift */; };
@@ -24,6 +27,7 @@
 		82F0090D1C97145600292682 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F0090C1C97145600292682 /* WebService.swift */; };
 		82F0090F1C9719AA00292682 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F0090E1C9719AA00292682 /* Item.swift */; };
 		82F009111C973B6600292682 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F009101C973B6600292682 /* ListViewCell.swift */; };
+		82F286C61C98F7C6007EF50C /* NSDateISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F286C51C98F7C6007EF50C /* NSDateISO8601.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +37,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				825925C21C986C6A001B51FF /* rtmpStreaming.framework in Embed Frameworks */,
+				825101671C9AC88E000EA51D /* XCGLogger.framework in Embed Frameworks */,
+				825101691C9AC893000EA51D /* rtmpstream.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,12 +46,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		820ED69D1C99E32F0009E033 /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
 		820F148B1C97A7AD00F46A51 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		823DFF491C97D16C001077D7 /* CustomBorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBorderButton.swift; sourceTree = "<group>"; };
 		823DFF4B1C97DC14001077D7 /* CreateLiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateLiveController.swift; sourceTree = "<group>"; };
 		823DFF4F1C97E03E001077D7 /* RTMPServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTMPServerViewController.swift; sourceTree = "<group>"; };
 		823DFF511C97E6B7001077D7 /* rtmp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = rtmp.framework; sourceTree = "<group>"; };
-		825925BD1C9867A3001B51FF /* rtmpStreaming.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = rtmpStreaming.framework; sourceTree = "<group>"; };
+		825101621C9AC871000EA51D /* rtmpstream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = rtmpstream.framework; sourceTree = "<group>"; };
+		825101641C9AC87E000EA51D /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XCGLogger.framework; sourceTree = "<group>"; };
 		825925BF1C9868ED001B51FF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		825925C41C98746D001B51FF /* liveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liveViewController.swift; sourceTree = "<group>"; };
 		82E92CEF1C969BAE007B871A /* RTMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +66,7 @@
 		82F0090C1C97145600292682 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		82F0090E1C9719AA00292682 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		82F009101C973B6600292682 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		82F286C51C98F7C6007EF50C /* NSDateISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateISO8601.swift; sourceTree = "<group>"; };
 		86665761BBEDBBB9EA2500A7 /* Pods_RTMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F2B5E604275BAEC63B465D /* Pods-RTMP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTMP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTMP/Pods-RTMP.debug.xcconfig"; sourceTree = "<group>"; };
 		EE5B140D87A6AE7E52A76449 /* Pods-RTMP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTMP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTMP/Pods-RTMP.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,10 +77,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8251016A1C9AC8FD000EA51D /* rtmpstream.framework in Frameworks */,
+				825101661C9AC88E000EA51D /* XCGLogger.framework in Frameworks */,
 				825925C01C9868ED001B51FF /* AVFoundation.framework in Frameworks */,
-				825925BE1C9867A3001B51FF /* rtmpStreaming.framework in Frameworks */,
 				3C7F5FEE777D479D039DD521 /* Pods_RTMP.framework in Frameworks */,
-				825925C11C986C6A001B51FF /* rtmpStreaming.framework in Frameworks */,
+				825101651C9AC87E000EA51D /* XCGLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +109,7 @@
 		82E92CF11C969BAE007B871A /* RTMP */ = {
 			isa = PBXGroup;
 			children = (
+				82F286C21C98F79F007EF50C /* util */,
 				82E92CF21C969BAE007B871A /* AppDelegate.swift */,
 				82E92CF41C969BAE007B871A /* ViewController.swift */,
 				82E92CF61C969BAE007B871A /* Main.storyboard */,
@@ -109,13 +119,23 @@
 				825925C41C98746D001B51FF /* liveViewController.swift */,
 				82F009101C973B6600292682 /* ListViewCell.swift */,
 				82F0090C1C97145600292682 /* WebService.swift */,
+				820ED69D1C99E32F0009E033 /* util.swift */,
 				823DFF491C97D16C001077D7 /* CustomBorderButton.swift */,
 				82E92CF91C969BAE007B871A /* Assets.xcassets */,
 				82E92CFB1C969BAE007B871A /* LaunchScreen.storyboard */,
 				82E92CFE1C969BAE007B871A /* Info.plist */,
-				825925BD1C9867A3001B51FF /* rtmpStreaming.framework */,
+				825101641C9AC87E000EA51D /* XCGLogger.framework */,
+				825101621C9AC871000EA51D /* rtmpstream.framework */,
 			);
 			path = RTMP;
+			sourceTree = "<group>";
+		};
+		82F286C21C98F79F007EF50C /* util */ = {
+			isa = PBXGroup;
+			children = (
+				82F286C51C98F7C6007EF50C /* NSDateISO8601.swift */,
+			);
+			name = util;
 			sourceTree = "<group>";
 		};
 		BF4330D8C44830B9AD476E8E /* Frameworks */ = {
@@ -262,9 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				82F0090F1C9719AA00292682 /* Item.swift in Sources */,
+				82F286C61C98F7C6007EF50C /* NSDateISO8601.swift in Sources */,
 				823DFF4C1C97DC14001077D7 /* CreateLiveController.swift in Sources */,
 				823DFF501C97E03E001077D7 /* RTMPServerViewController.swift in Sources */,
 				825925C51C98746D001B51FF /* liveViewController.swift in Sources */,
+				820ED69E1C99E32F0009E033 /* util.swift in Sources */,
 				82F0090D1C97145600292682 /* WebService.swift in Sources */,
 				82F009111C973B6600292682 /* ListViewCell.swift in Sources */,
 				82E92CF51C969BAE007B871A /* ViewController.swift in Sources */,

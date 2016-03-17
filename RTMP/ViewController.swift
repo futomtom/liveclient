@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireOauth2
 import SnapKit
+import SCLAlertView
 
 
 
@@ -45,38 +46,42 @@ class ViewController: UIViewController {
                 if(success){
                     print("getdata")
                     self.items=result!
+                    if self.items.count == 0
+                    {
+                        let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showSuccess("No Pre created Youtube broadcast", subTitle: "create live will implement later.")
+
+                    }
                     self.tableView.reloadData()
-                }
-                else
-                {
-                    print("get data fail")
-                }
-                
-                
-            })
-            }, errorHandler: {
-                print("Oauth2 failed")
-        })
+                    self.prefetchStreamName()
+                    }
+            })},errorHandler:{     })
     }
     
     
-          
-        
-        
-        
-        
-        
- 
+    
+
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+
+    
+        func prefetchStreamName()
+        {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+                for i in 0 ..< self.items.count {
+                    YoutubeService.getStreamName(self.items[i], completion: { (result) -> Void in
+                        self.items[i].ingestionAddress=result![0]
+                        self.items[i].streamName=result![1]
+                    })}})
+        }
+  
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "playVC") {
-//            let playVC:PlayViewController = segue.destinationViewController as! PlayViewController
-//            playVC.playItem=items[(tableView.indexPathForSelectedRow?.row)!]
+        if (segue.identifier == "youtube"){
+
         }
     }
 }
@@ -96,12 +101,32 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
         cell.renderData(items[indexPath.row])
         return cell
+        
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+            
+            let liveVC = storyboard?.instantiateViewControllerWithIdentifier("livevc") as! liveViewController
+            let selected=(tableView.indexPathForSelectedRow?.row)!
+            
+            if items[selected].streamName.length == 0 {
+                YoutubeService.getStreamName(items[selected],completion: { (result) -> Void in
+                    self.items[selected].ingestionAddress=result![0]
+                    self.items[selected].streamName=result![1]
+                    
+                    liveVC.url = self.items[selected].ingestionAddress
+                    liveVC.streamName = self.items[selected].streamName
+                    self.navigationController?.pushViewController(liveVC, animated: true)
+                })
+            }else
+            {
+                liveVC.url = items[selected].ingestionAddress
+                liveVC.streamName = items[selected].streamName
+                 self.navigationController?.pushViewController(liveVC, animated: true)
+            }
+  
     }
     
-    
-    
- 
-
 
 }
 

@@ -16,11 +16,17 @@ import SwiftyJSON
 struct Item
 {
 
-    var snippet : Snippet
-    
+    var snippet : Snippet!
+    var boundStreamId :String!
+    var streamName : String=""
+    var ingestionAddress:String=""
     
     init( itemData:JSON ){
-        snippet=Snippet(json: itemData["snippet"])
+        if let StreamId = itemData["contentDetails"]["boundStreamId"].string
+        {
+            boundStreamId=StreamId
+            snippet=Snippet(json: itemData["snippet"])
+        }
     }
 }
 
@@ -43,6 +49,10 @@ class Snippet{
     var scheduledDate:String!
     var scheduledTime:String!
     var ThumbnailURL :String!
+  
+
+    
+    
     
     var title : String!
     
@@ -65,6 +75,7 @@ class Snippet{
         scheduledTime=scheduledStartTime.substring(11, length: 8)
         title = json["title"].stringValue
         ThumbnailURL = json["thumbnails"]["default"]["url"].stringValue
+       
     }
     
 }

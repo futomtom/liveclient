@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import rtmpStreaming
+import rtmpstream
 import AVFoundation
 import SnapKit
 
